@@ -5,6 +5,10 @@ public class Serie extends Titulo{
     private int episodiosTemporada;
     private int minutosEpisodio;
 
+    public Serie(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+    }
+
     public int getTemporadas() {
         return temporadas;
     }
@@ -34,4 +38,8 @@ public class Serie extends Titulo{
         return temporadas * episodiosTemporada * minutosEpisodio;
     }
 
+    @Override
+    public String toString() {
+        return "Serie: " + getNombre() + " (" + getFechaDeLanzamiento() + ")";
+    }
 }
